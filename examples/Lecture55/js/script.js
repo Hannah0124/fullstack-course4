@@ -30,18 +30,30 @@ document.addEventListener("DOMContentLoaded",
     document.querySelector("button")
       .addEventListener("click", sayHello);
 
-    document.querySelector("body")
-      .addEventListener("mousemove",
-        function (event) {
-          if (event.shiftKey === true) {
-            console.log("x: " + event.clientX);
-            console.log("y: " + event.clientY);
-          }
-        }
-      );
-
+    document.querySelector("body").addEventListener("mousemove", 
+     function(event) {
+       // Only when clicking on "shift key", print out following "console.log"
+       if (event.shiftKey === true) {
+        console.log("x: " + event.clientX);
+        console.log("y: " + event.clientY);
+       }
+    });
   }
 );
+
+    
+
+
+
+    // document.querySelector("body")
+    //   .addEventListener("mousemove",
+    //     function (event) {
+    //       if (event.shiftKey === true) {
+    //         console.log("x: " + event.clientX);
+    //         console.log("y: " + event.clientY);
+    //       }
+    //     }
+
 
 
 

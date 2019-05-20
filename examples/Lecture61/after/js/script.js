@@ -55,7 +55,7 @@ var insertProperty = function (string, propName, propValue) {
 document.addEventListener("DOMContentLoaded", function (event) {
 
 // On first load, show home view
-showLoading("#main-content");
+showLoading("#main-content"); // show loading icon
 $ajaxUtils.sendGetRequest(
   homeHtml,
   function (responseText) {

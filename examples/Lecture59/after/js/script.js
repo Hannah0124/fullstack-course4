@@ -1,10 +1,15 @@
 $(function () { // Same as document.addEventListener("DOMContentLoaded"...
 
   // Same as document.querySelector("#navbarToggle").addEventListener("blur",...
+
+  // When .blur happens, I want you to execute thie function(event)
   $("#navbarToggle").blur(function (event) {
-    var screenWidth = window.innerWidth;
+    var screenWidth = window.innerWidth; // window -> width of the brower itself(not the entire screen)
     if (screenWidth < 768) {
+
+      // if the screen width is less than 768, we will select "collapsable-nav" ID with the collapase function (with 'hide' value)
       $("#collapsable-nav").collapse('hide');
+      // if we click other place(blur) other than the menu, the blur event will fire and the menu will be collapsed( = disappeared)
     }
   });
 
